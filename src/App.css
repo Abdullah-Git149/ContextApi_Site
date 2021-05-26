@@ -1,38 +1,255 @@
-.App {
-  text-align: center;
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body{
+  font-family: 'Lato', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* Navbar design  */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.navbar{
+  box-shadow: 0 1px 3px rgba(0, 0, 0,0.1);
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+}
+.nav{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+
+}
+.container{
+  width: 950px;
+  margin: 0 auto;
+  height: 70px;
+  align-items: center;
+}
+.nav__left{
+  width: 40%;
+
+}
+.nav__right{
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+.logo{
+  width: 70px;
+}
+.logo img{
+  width: 100%;
+  overflow: hidden;
+}
+.nav__right ul{
+  list-style: none;
+
+
+}
+.nav__right ul li a{
+  text-decoration: none;
+  margin-left: 20px;
+}
+.fa-shopping-cart{
+  font-size: 20px;
+  color: #222;
+}
+.conuter{
+  font-size: 20px;
+  width: 35px;
+  height: 35px;
+  background-color: #f57224;
+  border-radius: 50%;
+display: inline-block;
+text-align: center;
+line-height: 35px;
+}
+/* Bannber Desiging  */
+.banner{
+  background: url("./images/banner.jpg");
+  height: 80vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.banner__data{
+  height: 70vh;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+ 
+}
+.banner__data h1, .banner__data h2{
+  text-transform: uppercase;
+
+}
+.banner__data h1{
+  color: #f57224;
+  font-weight: 800;
+  font-size: 60px;
+  margin: 10px 0;
+
+}
+.banner__data h2{
   color: white;
+  font-size: 30px;
+  font-weight: 700;
+}
+.products{
+
+}
+.product__flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 40px 0;
+}
+.product__box{
+  width: 23%;
+}
+.product__img{
+  width: 100%;
+}
+.product__img img{
+  width: 100%;
+  overflow: hidden;
+}
+.product__box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding: 20px 0; */
+  margin: 10px 0;
+  border: 3px solid #fafafa;
+}
+.product__detail{
+  padding: 15px 10;
+}
+.product__name{
+  font-size: 25px;
+  font-weight: 500;
+}
+.product__price{
+  padding: 20px 0;
+}
+.add__to__cart{
+  width: 100%;
+  background-color: #f57224;
+  padding: 15px 0;
+  text-align: center;
+  cursor: pointer;
+}
+.container{
+  width: 950px;
+  max-width: 950px;
+  margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+/* cart  */
+.cart__container{
+  padding: 20px 50px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
+.cart__detail{
+  width: 70%;
+  border: 2px solid #fafafa;
+}
+.cart{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 15px 20px;
+}
+.cart__img{
+  display: inline-block;
+  width: 100px;
+  border-radius: 4px;
+  
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
+.cart__img img{
+  border-radius: 4px;
+  width: 100%;
+  overflow: hidden;
+}
+.cart__product__name{
+  width: 150px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+.cart__price{
+  width: 150px;
+  padding: 0 20px;
+  color: #f57224;
+
+}
+.inc{
+ display: inline-block;
+ width: 30px;
+ height:30px;
+ border: 1px solid #f57224;
+ text-align: center;
+ line-height: 30px;
+ font-size: small;
+ cursor: pointer;
+}
+.cart__qty{
+  padding: 0 20px;  
+}
+.dec{
+  display: inline-block;
+  width: 30px;
+  height:30px;
+  border: 1px solid  red;
+  text-align: center;
+  line-height: 30px;
+  font-size: small;
+  cursor: pointer;
+ }
+ .total__price{
+   padding: 0 25px;
+ }
+ .trash{
+   padding: 0 15px;
+   color: rgb(221, 86, 86);
+   font-size: small;
+ }
+ .cart__summary{
+   width: 25%;
+   background-color: #fafafa;
+   padding: 40px 20px;
+ }
+ .summary h2{
+   font-size: 18px;
+   font-weight: bold;
+   border-bottom: 1px solid #f57224;
+   padding-bottom: 15px;
+ }
+ .total__items{
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+   margin: 20px 0;
+ }
+ .total__prices{
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+
+ }
+ .item__count,.toal__price__rs{
+   color: #f57224;
+   font-weight: bold;
+ }
+ .stripe__section{
+   margin: 20px 0;
+ }
